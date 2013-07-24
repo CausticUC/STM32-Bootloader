@@ -1,0 +1,11 @@
+--- flight/ExtLibraries/STM32F30x_DSP_StdPeriph_Lib_V1.0.0/Libraries/STM32F30x_StdPeriph_Driver/src/stm32f30x_gpio.c
++++ flight/ExtLibraries/STM32F30x_DSP_StdPeriph_Lib_V1.0.0/Libraries/STM32F30x_StdPeriph_Driver/src/stm32f30x_gpio.c
+@@ -171,7 +171,7 @@
+   *                       and GPIO_Pin_10 for GPIOF.
+   * @retval None
+   */
+-void GPIO_Init(GPIO_TypeDef* GPIOx, GPIO_InitTypeDef* GPIO_InitStruct)
++void GPIO_Init(GPIO_TypeDef* GPIOx, const GPIO_InitTypeDef* GPIO_InitStruct)
+ { 
+   uint32_t pinpos = 0x00, pos = 0x00 , currentpin = 0x00;
+ 

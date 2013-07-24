@@ -1,0 +1,15 @@
+--- flight/ExtLibraries/STM32_USB-FS-Device_Lib_V4.0.0/Libraries/STM32_USB-FS-Device_Driver/inc/usb_core.h
++++ flight/ExtLibraries/STM32_USB-FS-Device_Lib_V4.0.0/Libraries/STM32_USB-FS-Device_Driver/inc/usb_core.h
+@@ -182,9 +181,9 @@
+ 
+   RESULT  (*Class_Get_Interface_Setting)(uint8_t Interface, uint8_t AlternateSetting);
+ 
+-  uint8_t const* (*GetDeviceDescriptor)(uint16_t Length);
+-  uint8_t const* (*GetConfigDescriptor)(uint16_t Length);
+-  uint8_t const* (*GetStringDescriptor)(uint16_t Length);
++  uint8_t* (*GetDeviceDescriptor)(uint16_t Length);
++  uint8_t* (*GetConfigDescriptor)(uint16_t Length);
++  uint8_t* (*GetStringDescriptor)(uint16_t Length);
+ 
+   /* This field is not used in current library version. It is kept only for 
+ 

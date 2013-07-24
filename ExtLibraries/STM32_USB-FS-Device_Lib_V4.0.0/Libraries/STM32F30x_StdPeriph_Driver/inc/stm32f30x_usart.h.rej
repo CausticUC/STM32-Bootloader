@@ -1,0 +1,11 @@
+--- flight/ExtLibraries/STM32F30x_DSP_StdPeriph_Lib_V1.0.0/Libraries/STM32F30x_StdPeriph_Driver/inc/stm32f30x_usart.h
++++ flight/ExtLibraries/STM32F30x_DSP_StdPeriph_Lib_V1.0.0/Libraries/STM32F30x_StdPeriph_Driver/inc/stm32f30x_usart.h
+@@ -520,7 +520,7 @@
+ 
+ /* Initialization and Configuration functions *********************************/
+ void USART_DeInit(USART_TypeDef* USARTx);
+-void USART_Init(USART_TypeDef* USARTx, USART_InitTypeDef* USART_InitStruct);
++void USART_Init(USART_TypeDef* USARTx, const USART_InitTypeDef* USART_InitStruct);
+ void USART_StructInit(USART_InitTypeDef* USART_InitStruct);
+ void USART_ClockInit(USART_TypeDef* USARTx, USART_ClockInitTypeDef* USART_ClockInitStruct);
+ 
