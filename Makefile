@@ -14,15 +14,15 @@ OBJS = $(SOURCE:.c=.o)
 CFLAGS = $(DEBUG)
 
 # Device Specifications for the compiler
-MCU_GCC_DEF = GCC_ARMCM3_STM32F10X
+MCU_GCC_DEF = GCC_ARMCM3_STM32F30X
 
 # Linker Flags
 LINKER_FLAGS = -nostartfiles -Xlinker -oF3DisDem.axf -Xlinker -M -Xlinker -Map=f3disdem.map -Xlinker --no-gc-sections
 
 # Project-wide Libraries needed
-RTOS_SOURCE_DIR=$(FreeRTOS_ROOT)/Source
-STM32_DRIVER_DIR = $(PROJECT_LOC)/../F3DiscoveryDemo-crossworks/Demo/CORTEX_STM32F3Discovery_GCC_Rowley/Libraries/STM32F30x_StdPeriph_Driver
-CMSIS_DIR = /home/caustic/git/Indep/STM32F30x_DSP_StdPeriph_Lib_V1.0.0/Libraries/CMSIS/Device/ST/STM32F30x/Include
+RTOS_SOURCE_DIR=$(PROJECT_LOC)/ExtLibraries/FreeRTOSV7.4.2/FreeRTOS/Source
+STM32_DRIVER_DIR = $(PROJECT_LOC)/ExtLibraries/STM2F30x_DSP_StdPeriph_Lib_V1.0.0/Libraies/STM32F30x_StdPeriph_Driver
+CMSIS_DIR = $(PROJECT_LOC)/ExtLibraries/STM2F30x_DSP_StdPeriph_Lib_V1.0.0/Libraies/CMSIS/Device/ST/STM32F30x/Include
 
 LIBS = -I . \
        -I $(CMSIS_DIR) \
